@@ -91,7 +91,7 @@ zstyle ':fzf-tab:complete:nvim*' fzf-preview 'bat --color=always --style=numbers
 # ALIASES
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias cat='bat'
+alias cat="bat -p"
 
 # SHELL INTEGRATION
 eval "$(fzf --zsh)"
