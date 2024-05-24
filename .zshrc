@@ -93,7 +93,8 @@ zstyle ':fzf-tab:complete:nvim*' fzf-preview 'bat --color=always --style=numbers
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias cat="bat -p"
-
+alias vs="kitten @ launch --location=vsplit"
+alias sp="kitten @ launch --location=hsplit"
 # SHELL INTEGRATION
 eval "$(fzf --zsh)"
 
