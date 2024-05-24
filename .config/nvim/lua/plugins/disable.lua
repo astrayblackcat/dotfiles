@@ -7,5 +7,11 @@ return {
     opts = {
       indent = { enable = false }
     },
-  }
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = {
+        experimental = { ghost_text = false }
+    }
+  },
 }
