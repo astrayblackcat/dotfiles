@@ -90,7 +90,7 @@ zstyle ':fzf-tab:complete:cd*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:nvim*' fzf-preview 'bat --color=always --style=numbers $word'
 
 # ALIASES
-alias ls='ls --color=auto'
+alias ls='exa --icons'
 alias grep='grep --color=auto'
 alias cat="bat -p"
 alias vs="kitten @ launch --location=vsplit"
