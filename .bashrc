@@ -5,8 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias ls='exa --icons'
 alias grep='grep --color=auto'
+alias cat='bat -p'
+bind -s 'set completion-ignore-case on'
+
 PS1='[\u@\h \W]\$ '
 # ADD PATH
 add_path() {
