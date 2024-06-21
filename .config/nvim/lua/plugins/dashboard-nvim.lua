@@ -18,7 +18,6 @@ return {
             ]]
 
             logo = string.rep("\n", 2) .. logo .. "\n\n"
-            local config_args = { cwd = vim.fn.stdpath("config"), follow = true }
 
             local opts = {
                 theme = "doom",
@@ -29,11 +28,11 @@ return {
                     header = vim.split(logo, "\n"),
                     -- stylua: ignore
                     center = {
-                    { action = LazyVim.telescope("files"),                      desc = " Find File",       icon = " ", key = "f" },
+                    { action = "Telescope find_files",                               desc = " Find File",       icon = " ", key = "f" },
                     { action = "ene | startinsert",                             desc = " New File",        icon = " ", key = "n" },
                     { action = "Telescope oldfiles",                            desc = " Recent Files",    icon = " ", key = "r" },
                     { action = "Telescope live_grep",                           desc = " Find Text",       icon = " ", key = "g" },
-                    { action = LazyVim.telescope("find_files", config_args),    desc = " Config",          icon = " ", key = "c" },
+                    { action = 'lua LazyVim.pick.config_files()()',             desc = " Config",          icon = " ", key = "c" },
                     { action = 'lua require("persistence").load()',             desc = " Restore Session", icon = " ", key = "s" },
                     { action = "LazyExtras",                                    desc = " Lazy Extras",     icon = " ", key = "x" },
                     { action = "Lazy",                                          desc = " Lazy",            icon = "󰒲 ", key = "l" },
