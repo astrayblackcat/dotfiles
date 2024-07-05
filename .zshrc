@@ -19,15 +19,15 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-# PLUGINS
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
-
 # LOAD COMPLETIONS
+zinit light zsh-users/zsh-completions
 autoload -U compinit && compinit
 zinit cdreplay -q
+
+# PLUGINS
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
 
 # ADD PATH
 add_path() {
