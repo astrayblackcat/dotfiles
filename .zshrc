@@ -86,11 +86,11 @@ export DIFFPROG="nvim -d"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:cd*' fzf-preview 'eza --color=always --icons --oneline $realpath'
 zstyle ':fzf-tab:complete:nvim*' fzf-preview 'bat --color=always --style=numbers $word'
 
 # ALIASES
-alias ls='exa --icons'
+alias ls='eza --icons'
 alias grep='grep --color=auto'
 alias cat="bat -p"
 alias vs="kitten @ launch --location=vsplit"
