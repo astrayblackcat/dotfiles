@@ -1,14 +1,9 @@
 return {
-  {
-    "echasnovski/mini.pairs",
-    opts = {
-        mappings = {
-            ["("] = { action = "open", pair = "()", neigh_pattern = "[^\\][%s%)%]%}]" },
-            ["["] = { action = "open", pair = "[]", neigh_pattern = "[^\\][%s%)%]%}]" },
-            ["{"] = { action = "open", pair = "{}", neigh_pattern = "[^\\][%s%)%]%}]" },
-            ['"'] = { action = 'closeopen', pair = '""', neigh_pattern = '[^%w][^%w]', register = { cr = false } },
-            ["'"] = { action = 'closeopen', pair = "''", neigh_pattern = '[^%w][^%w]', register = { cr = false } },
-        }
-    }
-  }
+    'altermo/ultimate-autopair.nvim',
+    event={'InsertEnter','CmdlineEnter'},
+    branch='v0.6', --recommended as each new version will have breaking changes
+    opts={
+        --Config goes here
+    },
 }
+

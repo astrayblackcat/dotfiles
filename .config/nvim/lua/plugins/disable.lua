@@ -1,4 +1,6 @@
 return {
+
+  { "echasnovski/mini.pairs", enabled = false },
   { "rcarriga/nvim-notify", enabled = false },
   { "echasnovski/mini.indentscope", enabled = false },
   { "lukas-reineke/indent-blankline", enabled = false },
