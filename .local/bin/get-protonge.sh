@@ -28,9 +28,9 @@ sha512sum -c $checksum_name
 
 # make steam directory if it does not exist
 echo "Creating Steam directory if it does not exist..."
-mkdir -p ~/.steam/root/compatibilitytools.d
+mkdir -p ~/.steam/root/compatibilitytools.d/Proton-GE
 
 # extract proton tarball to steam directory
 echo "Extracting $tarball_name to Steam directory..."
-tar -xf $tarball_name -C ~/.steam/root/compatibilitytools.d/
+tar -xf $tarball_name -C ~/.steam/root/compatibilitytools.d/Proton-GE --strip-components=1
 echo "All done :)"
