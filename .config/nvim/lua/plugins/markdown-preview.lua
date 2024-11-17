@@ -22,7 +22,7 @@ return {
   opts = {
     file_types = { "markdown", "norg", "rmd", "org" },
     code = {
-      sign = false,
+      sign = true,
       width = "block",
       right_pad = 1,
     },
@@ -34,7 +34,7 @@ return {
   ft = { "markdown", "norg", "rmd", "org" },
   config = function(_, opts)
     require("render-markdown").setup(opts)
-    LazyVim.toggle.map("<leader>um", {
+    Snacks.toggle.option("render-markdown", {
       name = "Render Markdown",
       get = function()
         return require("render-markdown.state").enabled
@@ -47,7 +47,7 @@ return {
           m.disable()
         end
       end,
-    })
+    }):map("<leader>um")
   end,
   }
 }
