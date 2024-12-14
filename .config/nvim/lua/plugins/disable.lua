@@ -1,17 +1,29 @@
 return {
 
-  { "echasnovski/mini.pairs", enabled = false },
-  { "rcarriga/nvim-notify", enabled = false },
-  { "echasnovski/mini.indentscope", enabled = false },
-  { "lukas-reineke/indent-blankline", enabled = false },
-  { "rafamadriz/friendly-snippets", enabled = false },
-  { "garymjr/nvim-snippets", enabled = false},
-  {
-    "hrsh7th/nvim-cmp",
+  { "folke/snacks.nvim",
     opts = {
-        experimental = { ghost_text = false }
+      indent = {
+          enabled = false
+      }
     }
   },
+  { "saghen/blink.cmp",
+    opts = {
+      keymap = { preset = 'enter' },
+      completion = {
+        ghost_text = {
+          enabled = false,
+        },
+        list = {
+          selection = 'manual'
+        }
+      }
+    }
+  },
+  { "echasnovski/mini.pairs", enabled = false },
+  { "echasnovski/mini.indentscope", enabled = false },
+  { "rafamadriz/friendly-snippets", enabled = false },
+  { "garymjr/nvim-snippets", enabled = false},
   {
     "neovim/nvim-lspconfig",
     opts = {

@@ -32,5 +32,6 @@ mkdir -p ~/.steam/root/compatibilitytools.d/Proton-GE
 
 # extract proton tarball to steam directory
 echo "Extracting $tarball_name to Steam directory..."
+rm -rf ~/.steam/root/compatibilitytools.d/Proton-GE/*
 tar -xf $tarball_name -C ~/.steam/root/compatibilitytools.d/Proton-GE --strip-components=1
 echo "All done :)"
