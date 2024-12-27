@@ -8,7 +8,7 @@
 	defaultBranch = main
 
 [interactive]
-    diffFilter = delta --color-only --show-syntax-themes
+    diffFilter = delta --color-only
 
 [delta]
     navigate = true
