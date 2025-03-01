@@ -86,8 +86,10 @@ export DIFFPROG="nvim -d"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd*' fzf-flags --style=full --height=-5
 zstyle ':fzf-tab:complete:cd*' fzf-preview 'eza --color=always --icons --oneline $realpath'
-zstyle ':fzf-tab:complete:nvim*' fzf-preview 'bat --color=always --style=numbers $word'
+zstyle ':fzf-tab:complete:nvim*' fzf-flags --style=full --height=-5
+zstyle ':fzf-tab:complete:nvim*' fzf-preview 'bat --color=always --style=numbers $realpath'
 
 # ALIASES
 alias ls='eza --icons'
