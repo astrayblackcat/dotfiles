@@ -1,5 +1,6 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.ui.indent-blankline"
   ],
   "install_version": 7,
