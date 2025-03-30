@@ -97,6 +97,8 @@ alias grep='grep --color=auto'
 alias cat="bat -p"
 alias vs="kitten @ launch --location=vsplit"
 alias sp="kitten @ launch --location=hsplit"
+alias msx="mise x --"
+alias msr="mise r"
 
 # SHELL INTEGRATION
 eval "$(fzf --zsh)"
