@@ -2,6 +2,7 @@
   "extras": [
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.lang.vue",
     "lazyvim.plugins.extras.ui.indent-blankline"
   ],
   "install_version": 7,
