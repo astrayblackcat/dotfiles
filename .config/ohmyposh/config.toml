@@ -1,0 +1,87 @@
+console_title_template = '{{.PWD}}'
+version = 3
+final_space = true
+
+[secondary_prompt]
+  template = '❯ '
+  foreground = 'magenta'
+  background = 'transparent'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '{{ if eq .PWD "~" }} {{ else if eq .PWD "/" }} {{ else }} {{ end }}{{ .Path }}'
+    foreground = 'blue'
+    background = 'transparent'
+    type = 'path'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      style = 'full'
+
+  [[blocks.segments]]
+    template = """ \
+              {{ .UpstreamIcon }} {{ .HEAD }}\
+              {{ if or (gt .Behind 0) (gt .Ahead 0)}}<yellow> {{ if gt .Behind 0 }}⇣{{ .Behind }}{{ end }}{{ if gt .Ahead 0 }}⇡{{ .Ahead }}{{ end }}</>{{ end }}\
+              {{ if gt .StashCount 0 }} *{{ .StashCount }}{{ end }}\
+              {{ if gt (add .Staging.Unmerged .Working.Unmerged) 0 }}<red> ~{{ add .Staging.Unmerged .Working.Unmerged }}</>{{ end }}\
+              {{ if gt (add .Staging.Added .Staging.Modified .Staging.Deleted) 0 }}<yellow> +{{ add .Staging.Added .Staging.Modified .Staging.Deleted }}</>{{ end }}\
+              {{ if gt (add .Working.Added .Working.Modified .Working.Deleted) 0 }}<yellow> !{{ add .Working.Modified .Working.Added .Working.Deleted }}</>{{ end }}\
+              {{ if or (gt .Working.Untracked 0) (gt .Staging.Untracked 0) }}<blue> ?{{add .Working.Untracked .Staging.Untracked}}</>{{ end }}\
+              """
+    foreground = 'green'
+    background = 'transparent'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      fetch_upstream_icon = true
+      fetch_status = true
+      branch_icon = ' '
+      commit_icon = '@'
+
+[[blocks]]
+  type = 'rprompt'
+  overflow = 'hidden'
+
+  [[blocks.segments]]
+    type = 'status'
+    foreground = 'red'
+    background = 'transparent'
+    template = '{{if (.Error) }} {{ end }}'
+
+    [blocks.segments.properties]
+    always_enabled = true
+
+  [[blocks.segments]]
+    template = '  {{ .FormattedMs }}'
+    foreground = 'yellow'
+    background = 'transparent'
+    type = 'executiontime'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      threshold = 1000
+      style = 'round'
+
+  [[blocks.segments]]
+    type = "python"
+    style = "plain"
+    foreground = "cyan"
+    background = "transparent"
+    template = "  {{ .Venv }}"
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '❯'
+    background = 'transparent'
+    type = 'text'
+    style = 'plain'
+    foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}']

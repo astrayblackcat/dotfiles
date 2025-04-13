@@ -5,9 +5,11 @@ My system setup files.
 ## Packages
 
 ```
-nvim
+neovim
 kitty
 zsh
+oh-my-posh
+mise
 fzf
 bat
 ripgrep
@@ -16,6 +18,9 @@ mangohud
 btop
 lazygit
 delta
+neofetch
+hyfetch
+gpu-screen-recorder
 ```
 
 ## Installation
