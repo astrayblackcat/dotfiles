@@ -66,20 +66,20 @@ overflow = 'hidden'
 type = 'status'
 foreground = 'red'
 background = 'transparent'
-template = '{{if (.Error) }} {{ end }}'
+template = '{{if (.Error) }}  {{ end }}'
 
 [blocks.segments.properties]
 always_enabled = true
 
 [[blocks.segments]]
-template = '  {{ .FormattedMs }}'
+template = ' {{ .FormattedMs }}'
 foreground = 'yellow'
 background = 'transparent'
 type = 'executiontime'
 style = 'plain'
 
 [blocks.segments.properties]
-threshold = 1000
+threshold = 500
 style = 'round'
 
 [[blocks.segments]]
