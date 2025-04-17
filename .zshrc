@@ -85,8 +85,8 @@ zstyle ':fzf-tab:complete:nvim*' fzf-preview 'bat --color=always --style=numbers
 alias ls='eza --icons'
 alias grep='grep --color=auto'
 alias cat="bat -p"
-alias vs="kitten @ launch --location=vsplit"
-alias sp="kitten @ launch --location=hsplit"
+alias vs="kitten @ launch --location=vsplit --cwd=current"
+alias sp="kitten @ launch --location=hsplit --cwd=current"
 alias msx="mise x --"
 alias msr="mise r"
 
