@@ -57,9 +57,9 @@
             "keyColor": "yellow"
         },
         {
-            "type": "gpu",
+            "type": "vulkan",
             "key": "│ ├󰍛",
-            "format": "{3}",
+            "format": "{~6, -1}",
             "keyColor": "yellow"
         },
         {
