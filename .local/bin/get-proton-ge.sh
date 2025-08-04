@@ -27,12 +27,12 @@ sha512sum -c "$checksum_name"
 # if result is ok, continue
 
 echo "Creating Steam directory if it does not exist..."
-proton_dir=~/.steam/root/compatibilitytools.d/Proton-GE
+proton_dir=~/.steam/steam/compatibilitytools.d/Proton-GE
 mkdir -p "$proton_dir"
 
 echo "Extracting $tarball_name to Steam directory..."
 rm -rf "$proton_dir"/*
-tar -xf "$tarball_name" -C ~/.steam/root/compatibilitytools.d/Proton-GE --strip-components=1
+tar -xf "$tarball_name" -C "$proton_dir" --strip-components=1
 # replace these to prevent steam from reverting to defaults when a version no longer exists
 sed -i -r 's|"GE-Proton.*"|"Proton-GE"|' "$proton_dir"/compatibilitytool.vdf
 echo "All done :)"
