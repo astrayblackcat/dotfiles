@@ -15,8 +15,8 @@ return {
     }
   },
   { "folke/which-key.nvim", opts = { preset = "classic" }},
-  { "echasnovski/mini.pairs", enabled = false },
-  { "echasnovski/mini.indentscope", enabled = false },
+  { "nvim-mini/mini.pairs", enabled = false },
+  { "nvim-mini/mini.indentscope", enabled = false },
   { "rafamadriz/friendly-snippets", enabled = true },
   { "garymjr/nvim-snippets", enabled = true },
   {
